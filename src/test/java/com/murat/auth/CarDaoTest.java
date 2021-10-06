@@ -55,7 +55,7 @@ class CarDaoTest {
 		car.setMake("bmw");
 		car.setModel("m4");
 		car.setColor("blue");
-		car.setYear(2022);
+		car.setYear("2022");
 		
 		repo.save(car);
 		assertNotNull(repo.get("es1d4f").getVin());
@@ -70,7 +70,7 @@ class CarDaoTest {
 		car.setMake("bmw");
 		car.setModel("m4");
 		car.setColor("blue");
-		car.setYear(2022);
+		car.setYear("2022");
 		
 		Car car1 = repo.get(car.getVin());
 		assertNull(car1);
@@ -84,7 +84,7 @@ class CarDaoTest {
 		car.setMake("bmw");
 		car.setModel("m4");
 		car.setColor("blue");
-		car.setYear(2022);
+		car.setYear("2022");
 		
 		repo.delete(car.getVin());
 		
@@ -101,7 +101,7 @@ class CarDaoTest {
 		car.setMake("bmw");
 		car.setModel("m4");
 		car.setColor("blue");
-		car.setYear(2022);
+		car.setYear("2022");
 		car.setSalesRep(car.getSalesRep());
 		
 		car = repo.save(car);
@@ -118,7 +118,7 @@ class CarDaoTest {
 		car.setMake("bmw");
 		car.setModel("m4");
 		car.setColor("blue");
-		car.setYear(2022);
+		car.setYear("2022");
 		
 		
 		car = repo.save(car);

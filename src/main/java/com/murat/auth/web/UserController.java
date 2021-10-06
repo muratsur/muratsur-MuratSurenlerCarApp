@@ -154,16 +154,21 @@ public class UserController {
     }
     
     @RequestMapping("/search")
-    public ModelAndView search(@RequestParam String keyword) {
+    public ModelAndView search(@RequestParam String keyword ,Long salesId) {
         List<Car> result = carService.search(keyword);
         ModelAndView mav = new ModelAndView("search");
         mav.addObject("result", result);
         
-        if ( (!result.contains(keyword)) || (keyword.length() < 1) ) {			
-			throw new CarNotFoundException("Car not found - " + keyword);
-		}
+        for(Car car : result) {
+        	if ( car.getMake().equals(keyword) || car.getModel().equals(keyword) || car.getColor().equals(keyword) || car.getYear().equals(keyword) ) {			
+    			return mav;
+    		}
+        	
+        	
+        }
+        
      
-        return mav;    
+        throw new CarNotFoundException("Car not found - " + keyword);   
     }
     
     @ExceptionHandler

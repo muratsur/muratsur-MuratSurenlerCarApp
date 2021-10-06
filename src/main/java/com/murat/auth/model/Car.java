@@ -16,14 +16,14 @@ public class Car {
 	private String make;
 	private String model;
 	private String color;
-	private int year;
+	private String year;
 	
 	@ManyToOne
 	private SalesRep salesRep;
 	
 	
 	
-	public Car(String vin, String make, String model, String color, int year, SalesRep salesRep) {
+	public Car(String vin, String make, String model, String color, String year, SalesRep salesRep) {
 		super();
 		this.vin = vin;
 		this.make = make;
@@ -78,11 +78,11 @@ public class Car {
 		this.color = color;
 	}
 
-	public int getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
