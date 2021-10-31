@@ -21,6 +21,7 @@ Bootstrap
 JUnit 
 MySQL
 Apache Tomcat
+JPA
 
 WHAT TO IMPROVE
 
