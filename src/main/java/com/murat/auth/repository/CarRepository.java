@@ -20,7 +20,6 @@ public interface CarRepository extends CrudRepository<Car, String> {
     public List<Car> search(@Param("keyword") String keyword);
     
     @Query(value="SELECT c FROM Car c JOIN c.salesRep s WHERE s.name LIKE %?1%")
-//	@Query(value="SELECT * FROM customer c JOIN salesrep s ON c.salesRep_id = s.id WHERE s.name LIKE %?1%",
-//			nativeQuery=true)
+
 	List<Car> findBySalesRepName(String salesRepName);
 }
