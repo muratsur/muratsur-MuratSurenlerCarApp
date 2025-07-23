@@ -1,4 +1,4 @@
-# muratsur-MuratSurenlerCaseStudy
+# muratsur-MuratSurenlerCarApp
 
 CAR MANAGER
 Control Your Stock
