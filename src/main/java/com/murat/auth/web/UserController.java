@@ -89,7 +89,7 @@ public class UserController {
         
     }
     
-    @RequestMapping({"/", "/salesRep"})
+    @RequestMapping("/salesRep")
     public ModelAndView homeSal() {
         List<SalesRep> listSalesRep = salesRepService.listAll();
         ModelAndView mav = new ModelAndView("salesRep");
